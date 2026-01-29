@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mariah Olson</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Source+Sans+3:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-bg: #FDFBF7;
+      --color-text: #2C2C2C;
+      --color-text-soft: #5A5A5A;
+      --color-accent: #C4694A;
+      --color-accent-soft: #E8D5CE;
+      --color-border: #E5E0D8;
+      --font-display: 'Fraunces', Georgia, serif;
+      --font-body: 'Source Sans 3', system-ui, sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 18px;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.7;
+      font-weight: 300;
+      min-height: 100vh;
+    }
+
+    ::selection {
+      background-color: var(--color-accent-soft);
+    }
+
+    .container {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 4rem 2rem 6rem;
+    }
+
+    /* Header */
+    header {
+      margin-bottom: 4rem;
+      animation: fadeUp 0.8s ease-out;
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .profile-photo {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+      flex-shrink: 0;
+      border: 3px solid var(--color-accent-soft);
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h1 {
+      font-family: var(--font-display);
+      font-size: 2.8rem;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+      color: var(--color-text);
+    }
+
+    .tagline {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--color-text-soft);
+    }
+
+    /* Sections */
+    section {
+      margin-bottom: 3.5rem;
+      animation: fadeUp 0.8s ease-out both;
+    }
+
+    section:nth-child(2) { animation-delay: 0.1s; }
+    section:nth-child(3) { animation-delay: 0.2s; }
+    section:nth-child(4) { animation-delay: 0.3s; }
+    section:nth-child(5) { animation-delay: 0.4s; }
+
+    h2 {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--color-accent);
+      margin-bottom: 1rem;
+      text-transform: lowercase;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      color: var(--color-text);
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Work items */
+    .work-item {
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .work-item:first-child {
+      border-top: 1px solid var(--color-border);
+    }
+
+    .work-title {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: 1.05rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .work-description {
+      font-size: 0.95rem;
+      color: var(--color-text-soft);
+      margin-bottom: 0;
+    }
+
+    /* Looking for section */
+    .looking-for {
+      background: linear-gradient(135deg, var(--color-accent-soft) 0%, rgba(253, 251, 247, 0) 100%);
+      padding: 2rem;
+      border-radius: 8px;
+      margin-top: 0.5rem;
+    }
+
+    .looking-for p {
+      color: var(--color-text);
+    }
+
+    /* Contact */
+    .contact {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    a {
+      color: var(--color-accent);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s ease;
+    }
+
+    a:hover {
+      border-bottom-color: var(--color-accent);
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 5rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--color-border);
+      animation: fadeUp 0.8s ease-out 0.5s both;
+    }
+
+    .footer-note {
+      font-size: 0.85rem;
+      color: var(--color-text-soft);
+      font-style: italic;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      html {
+        font-size: 16px;
+      }
+
+      .container {
+        padding: 3rem 1.5rem 4rem;
+      }
+
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      .header-content {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .profile-photo {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <div class="header-content">
+        <img src="mariah-photo.png" alt="Mariah Olson" class="profile-photo">
+        <div>
+          <h1>Mariah Olson</h1>
+          <p class="tagline">Scaling systems to help people connect</p>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <h2>about</h2>
+      <p>I co-founded <a href="https://schoolhouse.world" target="_blank">Schoolhouse World</a> with Sal Khan in 2020. Over five years, I built the systems that let volunteers tutor each other at scale - screening, training, certification, community. We started with a pilot; now it's reached 180,000 learners in 160+ countries.</p>
+      <p>I'm drawn to hard problems in mental health, education, and community - especially ones where the solution involves helping people help each other. I care about impact at scale, but the kind that empowers people rather than replaces them.</p>
+    </section>
+
+    <section>
+      <h2>what I bring</h2>
+      <div class="work-item">
+        <div class="work-title">I build peer-to-peer systems from scratch</div>
+        <p class="work-description">At Schoolhouse, I designed everything behind how volunteers support each other - and figured out how to make it work with a tiny team and limited resources.</p>
+      </div>
+      <div class="work-item">
+        <div class="work-title">I think in users and systems</div>
+        <p class="work-description">Background in UX, data engineering, and HCI research. I like understanding how people actually behave, then building infrastructure around that.</p>
+      </div>
+      <div class="work-item">
+        <div class="work-title">I make things work before they're perfect</div>
+        <p class="work-description">No-code tools, scrappy pilots, constant iteration. I'd rather learn from something real than plan forever.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>what I'm looking for</h2>
+      <div class="looking-for">
+        <p>I'm looking for a cofounder or small team where I can work <strong>in person</strong>, build something meaningful in <strong>mental health or community</strong>, and learn alongside people I trust.</p>
+        <p>I'm particularly drawn to ideas involving peer support, activity-based connection, and systems that scale human care. I'm open to Boston, SF, or the right opportunity elsewhere.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>get in touch</h2>
+      <div class="contact">
+        <a href="mailto:mariahraeolson@gmail.com">email</a>
+        <a href="https://www.linkedin.com/in/marolsi/" target="_blank">linkedin</a>
+      </div>
+    </section>
+
+    <footer>
+      <p class="footer-note">Previously: data engineering at Tresata, HCI research at UNC Charlotte.</p>
+    </footer>
+  </main>
+</body>
+</html>
