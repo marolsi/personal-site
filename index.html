@@ -62,8 +62,8 @@
     }
 
     .profile-photo {
-      width: 90px;
-      height: 90px;
+      width: 140px;
+      height: 140px;
       border-radius: 50%;
       object-fit: cover;
       object-position: center top;
@@ -166,7 +166,7 @@
     /* Contact */
     .contact {
       display: flex;
-      gap: 1.5rem;
+      gap: 1.25rem;
       flex-wrap: wrap;
     }
 
@@ -179,6 +179,36 @@
 
     a:hover {
       border-bottom-color: var(--color-accent);
+    }
+
+    /* Social Icons */
+    .social-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background-color: var(--color-accent-soft);
+      border-bottom: none;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .social-icon:hover {
+      background-color: var(--color-accent);
+      border-bottom: none;
+      transform: translateY(-2px);
+    }
+
+    .social-icon svg {
+      width: 22px;
+      height: 22px;
+      fill: var(--color-accent);
+      transition: fill 0.2s ease;
+    }
+
+    .social-icon:hover svg {
+      fill: var(--color-bg);
     }
 
     /* Footer */
@@ -215,8 +245,8 @@
       }
 
       .profile-photo {
-        width: 100px;
-        height: 100px;
+        width: 130px;
+        height: 130px;
       }
     }
   </style>
